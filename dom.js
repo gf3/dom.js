@@ -106,6 +106,20 @@ function setStyle(el, prop, val) {
     }
 }
 
+function width (el, val) {
+    if (val != undefined)
+        setStyle(el, "width", val + "px");
+    else
+        return parseInt(style(el, "width"), 10);
+}
+
+function height (el, val) {
+    if (val != undefined)
+        setStyle(el, "height", val + "px");
+    else
+        return parseInt(style(el, "height"), 10);
+}
+
 function offset(el) {
     var left = 0,
         top = 0;
